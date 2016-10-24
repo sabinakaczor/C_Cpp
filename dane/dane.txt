@@ -1,0 +1,6 @@
+Nazywasz się dd d.
+Twój nr telefonu to 55;
+Twoja data urodzenia to d;
+adres to d;
+email to gg.
+dane te odczytuję z pliku dane.txt.
