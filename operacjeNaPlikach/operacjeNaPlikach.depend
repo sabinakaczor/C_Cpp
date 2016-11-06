@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1477304886 source:/home/student/Pulpit/operacjeNaPlikach/main.c
-	<stdio.h>
-	<stdlib.h>
-
-1477305954 source:/home/student/Pulpit/operacjeNaPlikach/dane.c
-	<stdio.h>
-
