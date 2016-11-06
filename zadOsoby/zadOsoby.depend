@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1476704054 source:/home/student/Pulpit/zadOsoby/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1476816464 source:/media/student/TOSHIBA/c_cpp/zadOsoby/main.c
+	<stdio.h>
+	<stdlib.h>
+
