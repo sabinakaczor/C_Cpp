@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478524793 source:/home/student/Dokumenty/skaczor/obliczanie_reszty/main.cpp
+	<iostream>
+	<math.h>
+

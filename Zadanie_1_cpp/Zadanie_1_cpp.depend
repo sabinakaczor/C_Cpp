@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1478520627 source:/home/student/Dokumenty/skaczor/Zadanie_1_cpp/main.cpp
+	<iostream>
+	<math.h>
+
