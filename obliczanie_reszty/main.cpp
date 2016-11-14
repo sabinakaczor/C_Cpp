@@ -6,14 +6,21 @@ using namespace std;
 
 float round1(float f) {
     float f1 = floor(f * 5 + 0.5) / 5;
-    cout << "\n" << f1 << endl;
-    cout << trunc(f1*100)/100 << endl;
-    return trunc(f1*100)/100;
+    //cout << trunc(f1*100)/100 << endl;
+    //return (f1*100)/100 - (f1 % 100);
+    return f1;
 
 }
+
+float r(float f) {
+    double f1 = round(f*100)/100;
+    double r = f1 % 0.01;
+    return f1 - r;
+}
+
 int main()
 {
-    float wartosc, wplata;
+    /*float wartosc, wplata;
     float ile200 = 0;
     float ile100 = 0;
     float ile50 = 0;
@@ -123,7 +130,9 @@ int main()
     cout << "10gr: " << ile10gr << endl;
     cout << "5gr: " << ile5gr << endl;
     cout << "2gr: " << ile2gr << endl;
-    cout << "1gr: " << ile1gr << endl;
+    cout << "1gr: " << ile1gr << endl;*/
+
+    cout << r(643.4555) << endl;
 
 
 
