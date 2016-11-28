@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1480336442 source:/home/student/Dokumenty/28-11/C_Cpp/klasy-2811/main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+
