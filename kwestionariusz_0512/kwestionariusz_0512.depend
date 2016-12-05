@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1480938740 source:/home/student/Dokumenty/C_Cpp/kwestionariusz_0512/main.cpp
+	<iostream>
+	"Dane.h"
+
+1480939184 /home/student/Dokumenty/C_Cpp/kwestionariusz_0512/include/Osoba.h
+	<iostream>
+	<fstream>
+	<string>
+
+1480939261 /home/student/Dokumenty/C_Cpp/kwestionariusz_0512/include/Dane.h
+	<vector>
+	"Osoba.h"
+
+1480939291 source:/home/student/Dokumenty/C_Cpp/kwestionariusz_0512/src/Dane.cpp
+	"Dane.h"
+
+1480939191 source:/home/student/Dokumenty/C_Cpp/kwestionariusz_0512/src/Osoba.cpp
+	"Osoba.h"
+

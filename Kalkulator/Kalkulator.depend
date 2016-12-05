@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1480934455 source:/home/student/Dokumenty/C_Cpp/zajecia28-11/zajecia28_11App.cpp
-	"zajecia28_11App.h"
-	"zajecia28_11Main.h"
+1480941370 source:/home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.cpp
+	"KalkulatorApp.h"
+	"KalkulatorMain.h"
 	<wx/image.h>
 
-1480934455 /home/student/Dokumenty/C_Cpp/zajecia28-11/zajecia28_11App.h
+1480941370 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.h
 	<wx/app.h>
 
 1461809790 /usr/include/wx-2.8/wx/app.h
@@ -346,28 +346,17 @@
 
 1461809791 /usr/include/wx-2.8/wx/gtk/app.h
 
-1480934455 /home/student/Dokumenty/C_Cpp/zajecia28-11/zajecia28_11Main.h
+1480942170 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorMain.h
+	<wx/sizer.h>
 	<wx/button.h>
 	<wx/menu.h>
 	<wx/statusbr.h>
 	<wx/frame.h>
-	<wx/stattext.h>
 	<wx/textctrl.h>
 
-1461809791 /usr/include/wx-2.8/wx/menu.h
+1461809791 /usr/include/wx-2.8/wx/sizer.h
 	"wx/defs.h"
-	"wx/list.h"
 	"wx/window.h"
-	"wx/menuitem.h"
-	"wx/univ/menu.h"
-	"wx/palmos/menu.h"
-	"wx/msw/menu.h"
-	"wx/motif/menu.h"
-	"wx/gtk/menu.h"
-	"wx/gtk1/menu.h"
-	"wx/mac/menu.h"
-	"wx/cocoa/menu.h"
-	"wx/os2/menu.h"
 
 1461809791 /usr/include/wx-2.8/wx/window.h
 	"wx/event.h"
@@ -539,6 +528,51 @@
 1461809791 /usr/include/wx-2.8/wx/gtk/window.h
 	"wx/dynarray.h"
 
+1461809791 /usr/include/wx-2.8/wx/button.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/univ/button.h"
+	"wx/msw/button.h"
+	"wx/motif/button.h"
+	"wx/gtk/button.h"
+	"wx/gtk1/button.h"
+	"wx/mac/button.h"
+	"wx/cocoa/button.h"
+	"wx/os2/button.h"
+	"wx/palmos/button.h"
+
+1461809791 /usr/include/wx-2.8/wx/control.h
+	"wx/defs.h"
+	"wx/window.h"
+	"wx/univ/control.h"
+	"wx/palmos/control.h"
+	"wx/msw/control.h"
+	"wx/motif/control.h"
+	"wx/gtk/control.h"
+	"wx/gtk1/control.h"
+	"wx/mac/control.h"
+	"wx/cocoa/control.h"
+	"wx/os2/control.h"
+
+1461809792 /usr/include/wx-2.8/wx/gtk/control.h
+
+1461809792 /usr/include/wx-2.8/wx/gtk/button.h
+
+1461809791 /usr/include/wx-2.8/wx/menu.h
+	"wx/defs.h"
+	"wx/list.h"
+	"wx/window.h"
+	"wx/menuitem.h"
+	"wx/univ/menu.h"
+	"wx/palmos/menu.h"
+	"wx/msw/menu.h"
+	"wx/motif/menu.h"
+	"wx/gtk/menu.h"
+	"wx/gtk1/menu.h"
+	"wx/mac/menu.h"
+	"wx/cocoa/menu.h"
+	"wx/os2/menu.h"
+
 1461809791 /usr/include/wx-2.8/wx/menuitem.h
 	"wx/defs.h"
 	"wx/object.h"
@@ -647,6 +681,30 @@
 
 1461809792 /usr/include/wx-2.8/wx/gtk/frame.h
 
+1461809791 /usr/include/wx-2.8/wx/textctrl.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/dynarray.h"
+	"wx/gdicmn.h"
+	"wx/ioswrap.h"
+	"wx/x11/textctrl.h"
+	"wx/univ/textctrl.h"
+	"wx/msw/wince/textctrlce.h"
+	"wx/msw/textctrl.h"
+	"wx/motif/textctrl.h"
+	"wx/gtk/textctrl.h"
+	"wx/gtk1/textctrl.h"
+	"wx/mac/textctrl.h"
+	"wx/cocoa/textctrl.h"
+	"wx/os2/textctrl.h"
+
+1461809791 /usr/include/wx-2.8/wx/ioswrap.h
+	<iostream.h>
+	<iostream>
+	"wx/msw/winundef.h"
+
+1461809792 /usr/include/wx-2.8/wx/gtk/textctrl.h
+
 1461809791 /usr/include/wx-2.8/wx/image.h
 	"wx/defs.h"
 	"wx/object.h"
@@ -705,121 +763,4 @@
 
 1461809791 /usr/include/wx-2.8/wx/imagiff.h
 	"wx/image.h"
-
-1480941282 source:/home/student/Dokumenty/C_Cpp/zajecia28-11/zajecia28_11Main.cpp
-	"zajecia28_11Main.h"
-	<wx/msgdlg.h>
-	<vector>
-	<wx/string.h>
-	<wx/intl.h>
-
-1461809791 /usr/include/wx-2.8/wx/msgdlg.h
-	"wx/defs.h"
-	"wx/generic/msgdlgg.h"
-	"wx/generic/msgdlgg.h"
-	"wx/palmos/msgdlg.h"
-	"wx/msw/msgdlg.h"
-	"wx/motif/msgdlg.h"
-	"wx/gtk/msgdlg.h"
-	"wx/generic/msgdlgg.h"
-	"wx/generic/msgdlgg.h"
-	"wx/mac/msgdlg.h"
-	"wx/cocoa/msgdlg.h"
-	"wx/os2/msgdlg.h"
-
-1461809791 /usr/include/wx-2.8/wx/generic/msgdlgg.h
-	"wx/defs.h"
-	"wx/dialog.h"
-
-1461809791 /usr/include/wx-2.8/wx/dialog.h
-	"wx/defs.h"
-	"wx/containr.h"
-	"wx/toplevel.h"
-	"wx/univ/dialog.h"
-	"wx/palmos/dialog.h"
-	"wx/msw/dialog.h"
-	"wx/motif/dialog.h"
-	"wx/gtk/dialog.h"
-	"wx/gtk1/dialog.h"
-	"wx/mac/dialog.h"
-	"wx/cocoa/dialog.h"
-	"wx/os2/dialog.h"
-
-1461809790 /usr/include/wx-2.8/wx/containr.h
-
-1461809792 /usr/include/wx-2.8/wx/gtk/dialog.h
-	"wx/defs.h"
-
-1461809792 /usr/include/wx-2.8/wx/gtk/msgdlg.h
-	"wx/defs.h"
-	"wx/dialog.h"
-
-1461809791 /usr/include/wx-2.8/wx/button.h
-	"wx/defs.h"
-	"wx/control.h"
-	"wx/univ/button.h"
-	"wx/msw/button.h"
-	"wx/motif/button.h"
-	"wx/gtk/button.h"
-	"wx/gtk1/button.h"
-	"wx/mac/button.h"
-	"wx/cocoa/button.h"
-	"wx/os2/button.h"
-	"wx/palmos/button.h"
-
-1461809791 /usr/include/wx-2.8/wx/control.h
-	"wx/defs.h"
-	"wx/window.h"
-	"wx/univ/control.h"
-	"wx/palmos/control.h"
-	"wx/msw/control.h"
-	"wx/motif/control.h"
-	"wx/gtk/control.h"
-	"wx/gtk1/control.h"
-	"wx/mac/control.h"
-	"wx/cocoa/control.h"
-	"wx/os2/control.h"
-
-1461809792 /usr/include/wx-2.8/wx/gtk/control.h
-
-1461809792 /usr/include/wx-2.8/wx/gtk/button.h
-
-1461809791 /usr/include/wx-2.8/wx/stattext.h
-	"wx/defs.h"
-	"wx/control.h"
-	"wx/univ/stattext.h"
-	"wx/msw/stattext.h"
-	"wx/motif/stattext.h"
-	"wx/gtk/stattext.h"
-	"wx/gtk1/stattext.h"
-	"wx/mac/stattext.h"
-	"wx/cocoa/stattext.h"
-	"wx/os2/stattext.h"
-	"wx/palmos/stattext.h"
-
-1461809792 /usr/include/wx-2.8/wx/gtk/stattext.h
-
-1461809791 /usr/include/wx-2.8/wx/textctrl.h
-	"wx/defs.h"
-	"wx/control.h"
-	"wx/dynarray.h"
-	"wx/gdicmn.h"
-	"wx/ioswrap.h"
-	"wx/x11/textctrl.h"
-	"wx/univ/textctrl.h"
-	"wx/msw/wince/textctrlce.h"
-	"wx/msw/textctrl.h"
-	"wx/motif/textctrl.h"
-	"wx/gtk/textctrl.h"
-	"wx/gtk1/textctrl.h"
-	"wx/mac/textctrl.h"
-	"wx/cocoa/textctrl.h"
-	"wx/os2/textctrl.h"
-
-1461809791 /usr/include/wx-2.8/wx/ioswrap.h
-	<iostream.h>
-	<iostream>
-	"wx/msw/winundef.h"
-
-1461809792 /usr/include/wx-2.8/wx/gtk/textctrl.h
 

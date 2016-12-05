@@ -11,6 +11,8 @@
 #include <wx/msgdlg.h>
 #include <vector>
 
+using namespace std;
+
 //(*InternalHeaders(zajecia28_11Frame)
 #include <wx/string.h>
 #include <wx/intl.h>
@@ -133,6 +135,16 @@ int* fib(int n) {
     return fib;
 }
 
+wxString show_fib(int *fib, int n) {
+    string str = "";
+    for(int i=0; i<n; ++i) {
+        str += fib[i];
+        str += " ";
+    }
+    wxString str2(str.c_str(), wxConvUTF8);
+    return str2;
+}
+
 
 void zajecia28_11Frame::OnTextCtrl1Text(wxCommandEvent& event)
 {
@@ -141,11 +153,7 @@ void zajecia28_11Frame::OnTextCtrl1Text(wxCommandEvent& event)
 void zajecia28_11Frame::OnButton1Click2(wxCommandEvent& event)
 {
     int n = wxAtoi(TextCtrl1->GetValue());
-    int *wyrazyciagu = fib(n);
-    wxString fib;
-    for(int i=0; i<n; ++i) {
-        fib << wyrazyciagu[i];
-//        fib += " ";
-    }
+    int *fib1 = fib(n);
+    wxString fib = show_fib(fib1, n);
     StaticText2->SetLabel(fib);
 }
