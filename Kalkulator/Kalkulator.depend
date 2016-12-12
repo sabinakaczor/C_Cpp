@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1481538807 source:/home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.cpp
+1480941370 source:/home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.cpp
 	"KalkulatorApp.h"
 	"KalkulatorMain.h"
 	<wx/image.h>
 
-1481538807 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.h
+1480941370 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.h
 	<wx/app.h>
 
 1461809790 /usr/include/wx-2.8/wx/app.h
@@ -346,10 +346,13 @@
 
 1461809791 /usr/include/wx-2.8/wx/gtk/app.h
 
-1481539006 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorMain.h
+1480942170 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorMain.h
+	<wx/sizer.h>
+	<wx/button.h>
 	<wx/menu.h>
 	<wx/statusbr.h>
 	<wx/frame.h>
+	<wx/textctrl.h>
 
 1461809791 /usr/include/wx-2.8/wx/sizer.h
 	"wx/defs.h"
@@ -760,4 +763,67 @@
 
 1461809791 /usr/include/wx-2.8/wx/imagiff.h
 	"wx/image.h"
+
+1480941370 source:/home/student/Dokumenty/C_Cpp_/Kalkulator/KalkulatorApp.cpp
+	"KalkulatorApp.h"
+	"KalkulatorMain.h"
+	<wx/image.h>
+
+1480941370 /home/student/Dokumenty/C_Cpp_/Kalkulator/KalkulatorApp.h
+	<wx/app.h>
+
+1480942170 /home/student/Dokumenty/C_Cpp_/Kalkulator/KalkulatorMain.h
+	<wx/sizer.h>
+	<wx/button.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+	<wx/textctrl.h>
+
+1480943628 source:/home/student/Dokumenty/C_Cpp_/Kalkulator/KalkulatorMain.cpp
+	"KalkulatorMain.h"
+	<wx/msgdlg.h>
+	<wx/string.h>
+	<wx/intl.h>
+
+1461809791 /usr/include/wx-2.8/wx/msgdlg.h
+	"wx/defs.h"
+	"wx/generic/msgdlgg.h"
+	"wx/generic/msgdlgg.h"
+	"wx/palmos/msgdlg.h"
+	"wx/msw/msgdlg.h"
+	"wx/motif/msgdlg.h"
+	"wx/gtk/msgdlg.h"
+	"wx/generic/msgdlgg.h"
+	"wx/generic/msgdlgg.h"
+	"wx/mac/msgdlg.h"
+	"wx/cocoa/msgdlg.h"
+	"wx/os2/msgdlg.h"
+
+1461809791 /usr/include/wx-2.8/wx/generic/msgdlgg.h
+	"wx/defs.h"
+	"wx/dialog.h"
+
+1461809791 /usr/include/wx-2.8/wx/dialog.h
+	"wx/defs.h"
+	"wx/containr.h"
+	"wx/toplevel.h"
+	"wx/univ/dialog.h"
+	"wx/palmos/dialog.h"
+	"wx/msw/dialog.h"
+	"wx/motif/dialog.h"
+	"wx/gtk/dialog.h"
+	"wx/gtk1/dialog.h"
+	"wx/mac/dialog.h"
+	"wx/cocoa/dialog.h"
+	"wx/os2/dialog.h"
+
+1461809790 /usr/include/wx-2.8/wx/containr.h
+
+1461809792 /usr/include/wx-2.8/wx/gtk/dialog.h
+	"wx/defs.h"
+
+1461809792 /usr/include/wx-2.8/wx/gtk/msgdlg.h
+	"wx/defs.h"
+	"wx/dialog.h"
 
