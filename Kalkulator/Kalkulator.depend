@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1480941370 source:/home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.cpp
+1481538807 source:/home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.cpp
 	"KalkulatorApp.h"
 	"KalkulatorMain.h"
 	<wx/image.h>
 
-1480941370 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.h
+1481538807 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorApp.h
 	<wx/app.h>
 
 1461809790 /usr/include/wx-2.8/wx/app.h
@@ -346,13 +346,10 @@
 
 1461809791 /usr/include/wx-2.8/wx/gtk/app.h
 
-1480942170 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorMain.h
-	<wx/sizer.h>
-	<wx/button.h>
+1481539006 /home/student/Dokumenty/C_Cpp/Kalkulator/KalkulatorMain.h
 	<wx/menu.h>
 	<wx/statusbr.h>
 	<wx/frame.h>
-	<wx/textctrl.h>
 
 1461809791 /usr/include/wx-2.8/wx/sizer.h
 	"wx/defs.h"

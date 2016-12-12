@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1481547051 source:/home/student/Dokumenty/C_Cpp/Zajecia1212/main.cpp
+	<iostream>
+	"wektor.h"
+
+1481546127 source:/home/student/Dokumenty/C_Cpp/Zajecia1212/src/wektor.cpp
+	"wektor.h"
+	<iostream>
+	<ctime>
+	<cstdlib>
+
+1481546140 /home/student/Dokumenty/C_Cpp/Zajecia1212/include/wektor.h
+
