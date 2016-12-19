@@ -827,3 +827,25 @@
 	"wx/defs.h"
 	"wx/dialog.h"
 
+1482143534 source:/home/student/C_Cpp/Kalkulator/KalkulatorApp.cpp
+	"KalkulatorApp.h"
+	"KalkulatorMain.h"
+	<wx/image.h>
+
+1482143534 /home/student/C_Cpp/Kalkulator/KalkulatorApp.h
+	<wx/app.h>
+
+1482143534 /home/student/C_Cpp/Kalkulator/KalkulatorMain.h
+	<wx/sizer.h>
+	<wx/button.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+	<wx/textctrl.h>
+
+1482143534 source:/home/student/C_Cpp/Kalkulator/KalkulatorMain.cpp
+	"KalkulatorMain.h"
+	<wx/msgdlg.h>
+	<wx/string.h>
+	<wx/intl.h>
+
