@@ -49,9 +49,13 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Chinczyk/main.cpp \
-		../Chinczyk/mainwindow.cpp moc_mainwindow.cpp
+		../Chinczyk/mainwindow.cpp \
+		../Chinczyk/gracz.cpp \
+		../Chinczyk/form.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		gracz.o \
+		form.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -109,8 +113,12 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../Chinczyk/Chinczyk.pro ../Chinczyk/mainwindow.h ../Chinczyk/main.cpp \
-		../Chinczyk/mainwindow.cpp
+		../Chinczyk/Chinczyk.pro ../Chinczyk/mainwindow.h \
+		../Chinczyk/gracz.h \
+		../Chinczyk/form.h ../Chinczyk/main.cpp \
+		../Chinczyk/mainwindow.cpp \
+		../Chinczyk/gracz.cpp \
+		../Chinczyk/form.cpp
 QMAKE_TARGET  = Chinczyk
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = Chinczyk
@@ -138,7 +146,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_form.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../Chinczyk/Chinczyk.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -276,9 +284,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/main.cpp ../Chinczyk/mainwindow.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/mainwindow.h ../Chinczyk/gracz.h ../Chinczyk/form.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/main.cpp ../Chinczyk/mainwindow.cpp ../Chinczyk/gracz.cpp ../Chinczyk/form.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/mainwindow.ui ../Chinczyk/form.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -309,11 +317,14 @@ moc_mainwindow.cpp: ../Chinczyk/mainwindow.h
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h
+compiler_uic_make_all: ui_mainwindow.h ui_form.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h
+	-$(DEL_FILE) ui_mainwindow.h ui_form.h
 ui_mainwindow.h: ../Chinczyk/mainwindow.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Chinczyk/mainwindow.ui -o ui_mainwindow.h
+
+ui_form.h: ../Chinczyk/form.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Chinczyk/form.ui -o ui_form.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -331,6 +342,12 @@ main.o: ../Chinczyk/main.cpp ../Chinczyk/mainwindow.h
 mainwindow.o: ../Chinczyk/mainwindow.cpp ../Chinczyk/mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Chinczyk/mainwindow.cpp
+
+gracz.o: ../Chinczyk/gracz.cpp ../Chinczyk/gracz.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gracz.o ../Chinczyk/gracz.cpp
+
+form.o: ../Chinczyk/form.cpp ../Chinczyk/form.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o form.o ../Chinczyk/form.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

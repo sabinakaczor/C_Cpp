@@ -17,8 +17,12 @@ public:
 
 private slots:
     void paintEvent(QPaintEvent *event);
+
+    void on_button_start_clicked();
+
 private:
     Ui::MainWindow *ui;
+    bool clicked;
 };
 
 #endif // MAINWINDOW_H
