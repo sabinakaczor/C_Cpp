@@ -51,12 +51,14 @@ OBJECTS_DIR   = ./
 SOURCES       = ../Chinczyk/main.cpp \
 		../Chinczyk/mainwindow.cpp \
 		../Chinczyk/gracz.cpp \
-		../Chinczyk/form.cpp moc_mainwindow.cpp
+		../Chinczyk/rejestracja.cpp moc_mainwindow.cpp \
+		moc_rejestracja.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		gracz.o \
-		form.o \
-		moc_mainwindow.o
+		rejestracja.o \
+		moc_mainwindow.o \
+		moc_rejestracja.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -115,10 +117,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		../Chinczyk/Chinczyk.pro ../Chinczyk/mainwindow.h \
 		../Chinczyk/gracz.h \
-		../Chinczyk/form.h ../Chinczyk/main.cpp \
+		../Chinczyk/rejestracja.h ../Chinczyk/main.cpp \
 		../Chinczyk/mainwindow.cpp \
 		../Chinczyk/gracz.cpp \
-		../Chinczyk/form.cpp
+		../Chinczyk/rejestracja.cpp
 QMAKE_TARGET  = Chinczyk
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = Chinczyk
@@ -146,7 +148,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h ui_form.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_rejestracja.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../Chinczyk/Chinczyk.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -284,9 +286,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/mainwindow.h ../Chinczyk/gracz.h ../Chinczyk/form.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/main.cpp ../Chinczyk/mainwindow.cpp ../Chinczyk/gracz.cpp ../Chinczyk/form.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Chinczyk/mainwindow.ui ../Chinczyk/form.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/mainwindow.h ../Chinczyk/gracz.h ../Chinczyk/rejestracja.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/main.cpp ../Chinczyk/mainwindow.cpp ../Chinczyk/gracz.cpp ../Chinczyk/rejestracja.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Chinczyk/mainwindow.ui ../Chinczyk/rejestracja.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -309,22 +311,25 @@ check: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_rejestracja.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_rejestracja.cpp
 moc_mainwindow.cpp: ../Chinczyk/mainwindow.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/student/Dokumenty/C_Cpp/Chinczyk -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Chinczyk/mainwindow.h -o moc_mainwindow.cpp
 
+moc_rejestracja.cpp: ../Chinczyk/rejestracja.h
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/student/Dokumenty/C_Cpp/Chinczyk -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Chinczyk/rejestracja.h -o moc_rejestracja.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_form.h
+compiler_uic_make_all: ui_mainwindow.h ui_rejestracja.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_form.h
+	-$(DEL_FILE) ui_mainwindow.h ui_rejestracja.h
 ui_mainwindow.h: ../Chinczyk/mainwindow.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Chinczyk/mainwindow.ui -o ui_mainwindow.h
 
-ui_form.h: ../Chinczyk/form.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Chinczyk/form.ui -o ui_form.h
+ui_rejestracja.h: ../Chinczyk/rejestracja.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../Chinczyk/rejestracja.ui -o ui_rejestracja.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -340,17 +345,22 @@ main.o: ../Chinczyk/main.cpp ../Chinczyk/mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Chinczyk/main.cpp
 
 mainwindow.o: ../Chinczyk/mainwindow.cpp ../Chinczyk/mainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		ui_form.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Chinczyk/mainwindow.cpp
 
 gracz.o: ../Chinczyk/gracz.cpp ../Chinczyk/gracz.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gracz.o ../Chinczyk/gracz.cpp
 
-form.o: ../Chinczyk/form.cpp ../Chinczyk/form.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o form.o ../Chinczyk/form.cpp
+rejestracja.o: ../Chinczyk/rejestracja.cpp ../Chinczyk/rejestracja.h \
+		ui_rejestracja.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rejestracja.o ../Chinczyk/rejestracja.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_rejestracja.o: moc_rejestracja.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_rejestracja.o moc_rejestracja.cpp
 
 ####### Install
 

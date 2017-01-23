@@ -8,7 +8,8 @@
 
 using namespace std;
 
-
+QPainterPath path1, path2, path3, path4;
+ 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -21,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::paintEvent(QPaintEvent *event)
 {
     QPainter painter;
-    QPainterPath path1, path2, path3, path4;
+   
 
     if(clicked) {
         painter.begin(this);
@@ -192,10 +193,12 @@ void MainWindow::mouseDoubleClickEvent ( QMouseEvent * event )
 
 void MainWindow::handleMouseClick(int x, int y)
 {
+    
     //sprawdza czy czerwony
     if (x>80 && x<110 && y>80 && y<110)
     {
         cout << "clicked pionek czerwony " << x << " y " << y << "\n";
+        
     }
     else if (x>140 && x<170 && y>80 && y<110)
     {

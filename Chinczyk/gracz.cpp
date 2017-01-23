@@ -1,15 +1,19 @@
 #include "gracz.h"
 #include <time.h>
 #include <stdlib.h>
+#include <vector>
 
 Gracz::Gracz()
 {}
 
 
-void Gracz::get_color()
+vector<string> Gracz::get_color(vector<string> colors)
 {
-    string colors[4] = {"czerwony", "niebieski", "żółty", "zielony"};
+    //string colors[4] = {"czerwony", "niebieski", "żółty", "zielony"};
     srand (time(NULL));
-    this->color = colors[rand() % 4];
+    int chosen = rand() % 4;
+    this->color = colors[chosen];
+    colors.erase(colors.begin() + chosen);
+    return colors;
 }
 

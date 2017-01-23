@@ -38,8 +38,12 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(648, 562);
+        MainWindow->setCursor(QCursor(Qt::PointingHandCursor));
+        MainWindow->setMouseTracking(true);
+        MainWindow->setAcceptDrops(true);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setMouseTracking(true);
         button_start = new QPushButton(centralWidget);
         button_start->setObjectName(QStringLiteral("button_start"));
         button_start->setGeometry(QRect(130, 0, 121, 27));

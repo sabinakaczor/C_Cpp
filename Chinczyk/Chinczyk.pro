@@ -15,11 +15,11 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     gracz.cpp \
-    form.cpp
+    rejestracja.cpp
 
 HEADERS  += mainwindow.h \
     gracz.h \
-    form.h
+    rejestracja.h
 
 FORMS    += mainwindow.ui \
-    form.ui
+    rejestracja.ui
