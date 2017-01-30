@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     clicked = false;
+    started = false;
     ui->throw_die->setVisible(false);
 }
 
@@ -185,15 +186,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_button_start_clicked()
 {
-    clicked = !clicked;
-    if(clicked)
-        ui->button_start->setText("Zakończ grę");
-    else
-        ui->button_start->setText("Rozpocznij grę");
 
-    /*Rejestracja *r = new Rejestracja(this);
-    r->exec();*/
+    if(!started) {
+        started = true;
+        Rejestracja *r = new Rejestracja(this);
+        r->exec();
+    }
     //r->show();
+
+    clicked = !clicked;
+    if(clicked) {
+        ui->button_start->setText("Zakończ grę");
+    } else {
+        ui->button_start->setText("Rozpocznij grę");
+        started = false;
+    }
 
     update();
 }

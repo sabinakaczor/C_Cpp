@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     bool clicked;
+    bool started;
 
 private slots:
     void paintEvent(QPaintEvent *event);
