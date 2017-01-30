@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include <QString>
+#include <rozgrywka.h>
 
 using namespace std;
 
@@ -26,7 +27,6 @@ Rejestracja::~Rejestracja()
 
 void Rejestracja::on_buttonBox_accepted()
 {
-    //clicked = true;
     update();
 }
 
@@ -47,21 +47,30 @@ void Rejestracja::on_setPlayersQty_clicked()
     }
 
     if (qty>0) {
+
         vector<QString> players;
+        vector<Gracz*> players1;
+        QString text = "";
         for(int i=1; i<=qty; ++i) {
             QString title = "Gracz " + QString::number(i);
             bool ok;
-            QString text = QInputDialog::getText(this, title,
+            text = QInputDialog::getText(this, title,
                                                  tr("Podaj imię:"), QLineEdit::Normal,
                                                  NULL, &ok);
-            if(ok && !text.isEmpty())
+            if(ok && !text.isEmpty()) {
                 players.push_back(text);
+            }
+
         }
         for(int j=0; j<players.size(); ++j) {
             QListWidgetItem *qlwi = new QListWidgetItem(players[j]);
             ui->listWidget->addItem(qlwi);
-
+            players1.push_back(new Gracz(text.toStdString()));
         }
+        Rozgrywka *game = new Rozgrywka(players1);
+        MainWindow w;
+        w.start_game(game);
+
         ui->listWidget->setVisible(true);
     }
 

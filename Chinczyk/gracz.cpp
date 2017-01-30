@@ -3,17 +3,22 @@
 #include <stdlib.h>
 #include <vector>
 
-Gracz::Gracz()
-{}
-
-
-vector<string> Gracz::get_color(vector<string> colors)
+Gracz::Gracz(string id)
 {
-    //string colors[4] = {"czerwony", "niebieski", "żółty", "zielony"};
-    srand (time(NULL));
-    int chosen = rand() % 4;
-    this->color = colors[chosen];
-    colors.erase(colors.begin() + chosen);
-    return colors;
+    this->id = id;
+    this->pieces_home = 4;
+}
+
+
+void Gracz::set_thrown_dots(int dots) {
+    this->thrown_dots = dots;
+}
+
+void Gracz::update_tries() {
+    this->tries += 1;
+}
+
+void Gracz::set_color(string color) {
+    this->color = color;
 }
 

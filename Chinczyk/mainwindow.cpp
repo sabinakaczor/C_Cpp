@@ -5,6 +5,8 @@
 #include "QtGui"
 #include <QMouseEvent>
 #include <iostream>
+#include <rozgrywka.h>
+#include <gracz.h>
 
 using namespace std;
 
@@ -16,7 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     clicked = false;
     started = false;
-    ui->throw_die->setVisible(false);
+    ui->widgetinfo->setVisible(false);
+    ui->label->setText("");
 }
 
 void MainWindow::paintEvent(QPaintEvent *event)
@@ -189,7 +192,7 @@ void MainWindow::on_button_start_clicked()
 
     if(!started) {
         started = true;
-        Rejestracja *r = new Rejestracja(this);
+        r = new Rejestracja(this);
         r->exec();
     }
     //r->show();
@@ -201,6 +204,7 @@ void MainWindow::on_button_start_clicked()
         ui->button_start->setText("Rozpocznij grę");
         started = false;
     }
+    ui->widgetinfo->setVisible(true);
 
     update();
 }
@@ -296,3 +300,14 @@ void MainWindow::handleMouseClick(int x, int y)
 }
 
 
+
+void MainWindow::on_throw_die_clicked()
+{
+    //vector<Gracz*> players;
+
+    //ui->label->setText(QString::fromStdString(this->game->get_players()[0]));
+}
+
+void MainWindow::start_game(Rozgrywka *g) {
+    this->game = g;
+}

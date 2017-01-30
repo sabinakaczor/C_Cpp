@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QMouseEvent>
+#include <rejestracja.h>
+#include <rozgrywka.h>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +19,7 @@ public:
     ~MainWindow();
     bool clicked;
     bool started;
+    void start_game(Rozgrywka *g);
 
 private slots:
     void paintEvent(QPaintEvent *event);
@@ -24,8 +27,12 @@ private slots:
     void mouseDoubleClickEvent ( QMouseEvent * event );
     void handleMouseClick(int x, int y);
 
+    void on_throw_die_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Rejestracja *r;
+    Rozgrywka *game;
 };
 
 #endif // MAINWINDOW_H

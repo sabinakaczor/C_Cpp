@@ -2,6 +2,8 @@
 #define REJESTRACJA_H
 
 #include <QDialog>
+#include <vector>
+#include "gracz.h"
 
 namespace Ui {
 class Rejestracja;
@@ -20,8 +22,10 @@ private slots:
 
     void on_setPlayersQty_clicked();
 
+
 private:
     Ui::Rejestracja *ui;
+    vector<Gracz*> players;
 };
 
 #endif // REJESTRACJA_H
