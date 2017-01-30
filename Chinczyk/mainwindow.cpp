@@ -41,10 +41,12 @@ void MainWindow::paintEvent(QPaintEvent *event)
         painter.drawRect(domek_zielone);
         painter.drawRect(domek_zolte);
 
+        vector<QRect> ellipses;
         //na górze
         for(int i=200;i<=260; i=i+30) {
             for(int j=50; j<=170; j=j+30) {
                 painter.drawRect(QRect(i,j,30,30));
+                ellipses.push_back(QRect(i,j,30,30));
                 if ((j>50 && i==230)||(j==50 && i==260))
                     path1.addRect(QRect(i,j,30,30));
             }
@@ -54,6 +56,7 @@ void MainWindow::paintEvent(QPaintEvent *event)
         for(int i=200;i<=260; i=i+30) {
             for(int j=50; j<=170; j=j+30) {
                 painter.drawRect(QRect(j,i,30,30));
+                ellipses.push_back(QRect(j,i,30,30));
                 if((j>50 && i==230)||(i==200 && j==50))
                     path2.addRect(QRect(j,i,30,30));
             }
@@ -63,6 +66,7 @@ void MainWindow::paintEvent(QPaintEvent *event)
         for(int i=200;i<=260; i=i+30) {
             for(int j=50; j<=170; j=j+30) {
                 painter.drawRect(QRect(i,j+240,30,30));
+                ellipses.push_back(QRect(i,j+240,30,30));
                 if ((j<170 && i==230) || (j==170 && i==200))
                     path3.addRect(QRect(i,j+240,30,30));
             }
@@ -72,6 +76,7 @@ void MainWindow::paintEvent(QPaintEvent *event)
         for(int i=200;i<=260; i=i+30) {
             for(int j=50; j<=170; j=j+30) {
                 painter.drawRect(QRect(j+240,i,30,30));
+                ellipses.push_back(QRect(j+240,i,30,30));
                 if ((i==230 && j<170) || (i==260 && j==170))
                     path4.addRect(QRect(j+240,i,30,30));
             }
@@ -80,9 +85,22 @@ void MainWindow::paintEvent(QPaintEvent *event)
 
         //4 kwadraty na srodku
         painter.drawRect(200,200,30,30);
+        ellipses.push_back(QRect(200,200,30,30));
         painter.drawRect(200,260,30,30);
+        ellipses.push_back(QRect(200,260,30,30));
         painter.drawRect(260,200,30,30);
+        ellipses.push_back(QRect(260,200,30,30));
         painter.drawRect(260,260,30,30);
+        ellipses.push_back(QRect(260,260,30,30));
+
+        QPen pen0;
+        pen0.setWidth(0);
+        painter.setPen(Qt::NoPen);
+        for(int i=0; i<ellipses.size(); ++i) {
+            painter.drawEllipse(ellipses[i]);
+        }
+        QPen def;
+        painter.setPen(def);
 
         //pionki czerwone
         painter.drawEllipse(QRect(80,80,30,30));
@@ -138,20 +156,20 @@ void MainWindow::paintEvent(QPaintEvent *event)
         strzalka1.setPoints(7, points1);
         painter.drawPolygon(strzalka1);
 
-        /*static const int points2[] = { 60,200, 70,200, 280,210, 285,210, 275,220, 265,210, 270,210 };
+        static const int points2[] = { 50,210, 60,210, 60,205, 70,215, 60,225, 60,220, 50,220 };
         QPolygon strzalka2;
         strzalka2.setPoints(7, points2);
         painter.drawPolygon(strzalka2);
 
-        static const int points3[] = { 270,50, 280,50, 280,60, 285,60, 275,70, 265,60, 270,60 };
+        static const int points3[] = { 210,440, 220,440, 220,430, 225,430, 215,420, 205,430, 210,430 };
         QPolygon strzalka3;
         strzalka3.setPoints(7, points3);
         painter.drawPolygon(strzalka3);
 
-        static const int points4[] = { 270,50, 280,50, 280,60, 285,60, 275,70, 265,60, 270,60 };
+        static const int points4[] = { 440,280, 430,280, 430,285, 420,275, 430,265, 430,270, 440,270 };
         QPolygon strzalka4;
         strzalka4.setPoints(7, points4);
-        painter.drawPolygon(strzalka4);*/
+        painter.drawPolygon(strzalka4);
 
         painter.end();
     }
@@ -173,8 +191,8 @@ void MainWindow::on_button_start_clicked()
     else
         ui->button_start->setText("Rozpocznij grę");
 
-    //Rejestracja *r = new Rejestracja(this);
-    //r->exec();
+    /*Rejestracja *r = new Rejestracja(this);
+    r->exec();*/
     //r->show();
 
     update();

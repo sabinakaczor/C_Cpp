@@ -18,6 +18,8 @@ public:
 private slots:
     void on_buttonBox_accepted();
 
+    void on_setPlayersQty_clicked();
+
 private:
     Ui::Rejestracja *ui;
 };

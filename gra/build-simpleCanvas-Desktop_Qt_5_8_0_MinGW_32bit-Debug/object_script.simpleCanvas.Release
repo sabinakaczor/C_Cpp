@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\rejestracjagraczy.o
+./release\gra.o
+./release\personaldialog.o
+./release\gracz.o
+./release\pionek.o
+./release\moc_mainwindow.o
+./release\moc_rejestracjagraczy.o
+./release\moc_gra.o
+./release\moc_personaldialog.o
+);

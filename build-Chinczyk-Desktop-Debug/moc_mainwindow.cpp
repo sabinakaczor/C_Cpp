@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.5.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.5.1. It"
+#error "This file was generated using the moc from 5.2.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,32 +20,31 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[11];
-    char stringdata0[122];
+    char stringdata[123];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
+    offsetof(qt_meta_stringdata_MainWindow_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData) \
     )
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 10), // "paintEvent"
-QT_MOC_LITERAL(2, 22, 0), // ""
-QT_MOC_LITERAL(3, 23, 12), // "QPaintEvent*"
-QT_MOC_LITERAL(4, 36, 5), // "event"
-QT_MOC_LITERAL(5, 42, 23), // "on_button_start_clicked"
-QT_MOC_LITERAL(6, 66, 21), // "mouseDoubleClickEvent"
-QT_MOC_LITERAL(7, 88, 12), // "QMouseEvent*"
-QT_MOC_LITERAL(8, 101, 16), // "handleMouseClick"
-QT_MOC_LITERAL(9, 118, 1), // "x"
-QT_MOC_LITERAL(10, 120, 1) // "y"
-
+QT_MOC_LITERAL(0, 0, 10),
+QT_MOC_LITERAL(1, 11, 10),
+QT_MOC_LITERAL(2, 22, 0),
+QT_MOC_LITERAL(3, 23, 12),
+QT_MOC_LITERAL(4, 36, 5),
+QT_MOC_LITERAL(5, 42, 23),
+QT_MOC_LITERAL(6, 66, 21),
+QT_MOC_LITERAL(7, 88, 12),
+QT_MOC_LITERAL(8, 101, 16),
+QT_MOC_LITERAL(9, 118, 1),
+QT_MOC_LITERAL(10, 120, 1)
     },
     "MainWindow\0paintEvent\0\0QPaintEvent*\0"
     "event\0on_button_start_clicked\0"
     "mouseDoubleClickEvent\0QMouseEvent*\0"
-    "handleMouseClick\0x\0y"
+    "handleMouseClick\0x\0y\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -63,10 +62,10 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x08 /* Private */,
-       5,    0,   37,    2, 0x08 /* Private */,
-       6,    1,   38,    2, 0x08 /* Private */,
-       8,    2,   41,    2, 0x08 /* Private */,
+       1,    1,   34,    2, 0x08,
+       5,    0,   37,    2, 0x08,
+       6,    1,   38,    2, 0x08,
+       8,    2,   41,    2, 0x08,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -81,7 +80,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         MainWindow *_t = static_cast<MainWindow *>(_o);
-        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->paintEvent((*reinterpret_cast< QPaintEvent*(*)>(_a[1]))); break;
         case 1: _t->on_button_start_clicked(); break;
@@ -94,7 +92,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 
 const QMetaObject MainWindow::staticMetaObject = {
     { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow.data,
-      qt_meta_data_MainWindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_MainWindow,  qt_static_metacall, 0, 0}
 };
 
 
@@ -105,8 +103,8 @@ const QMetaObject *MainWindow::metaObject() const
 
 void *MainWindow::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_MainWindow.stringdata0))
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_MainWindow.stringdata))
         return static_cast<void*>(const_cast< MainWindow*>(this));
     return QMainWindow::qt_metacast(_clname);
 }

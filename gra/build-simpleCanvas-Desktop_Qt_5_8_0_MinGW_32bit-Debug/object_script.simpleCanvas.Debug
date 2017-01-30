@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\rejestracjagraczy.o
+./debug\gra.o
+./debug\personaldialog.o
+./debug\gracz.o
+./debug\pionek.o
+./debug\moc_mainwindow.o
+./debug\moc_rejestracjagraczy.o
+./debug\moc_gra.o
+./debug\moc_personaldialog.o
+);
